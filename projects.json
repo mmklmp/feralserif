@@ -1,0 +1,178 @@
+{
+  "projects": [
+    {
+      "id": "prjct01",
+      "category": "graphic",
+      "images": [
+        {
+          "src": "assets/images/prjct01/1.jpg",
+          "description": "Lorem ipsum dolor sit amet for prjct01 img1."
+        },
+        {
+          "src": "assets/images/prjct01/2.jpg",
+          "description": "Consectetur adipiscing elit for prjct01 img2."
+        },
+        {
+          "src": "assets/images/prjct01/3.jpg",
+          "description": "Sed do eiusmod tempor for prjct01 img3."
+        }
+      ]
+    },
+    {
+      "id": "prjct02",
+      "category": "print",
+      "images": [
+        {
+          "src": "assets/images/prjct02/1.jpg",
+          "description": "Ut enim ad minim veniam for prjct02 img1."
+        },
+        {
+          "src": "assets/images/prjct02/2.jpg",
+          "description": "Quis nostrud exercitation for prjct02 img2."
+        },
+        {
+          "src": "assets/images/prjct02/3.jpg",
+          "description": "Ullamco laboris nisi ut aliquip for prjct02 img3."
+        },
+        {
+          "src": "assets/images/prjct02/4.jpg",
+          "description": "Ex ea commodo consequat for prjct02 img4."
+        }
+      ]
+    },
+    {
+      "id": "prjct03",
+      "category": "3d",
+      "images": [
+        {
+          "src": "assets/images/prjct03/1.jpg",
+          "description": "Duis aute irure dolor in reprehenderit for prjct03 img1."
+        },
+        {
+          "src": "assets/images/prjct03/2.jpg",
+          "description": "In voluptate velit esse cillum dolore for prjct03 img2."
+        },
+        {
+          "src": "assets/images/prjct03/3.jpg",
+          "description": "Eu fugiat nulla pariatur for prjct03 img3."
+        },
+        {
+          "src": "assets/images/prjct03/4.jpg",
+          "description": "Excepteur sint occaecat cupidatat non proident for prjct03 img4."
+        },
+        {
+          "src": "assets/images/prjct03/5.jpg",
+          "description": "Sunt in culpa qui officia deserunt for prjct03 img5."
+        }
+      ]
+    },
+    {
+      "id": "prjct04",
+      "category": "graphic",
+      "images": [
+        {
+          "src": "assets/images/prjct04/1.jpg",
+          "description": "Lorem ipsum dolor sit amet for prjct04 img1."
+        },
+        {
+          "src": "assets/images/prjct04/2.jpg",
+          "description": "Consectetur adipiscing elit for prjct04 img2."
+        },
+        {
+          "src": "assets/images/prjct04/3.jpg",
+          "description": "Sed do eiusmod tempor for prjct04 img3."
+        },
+        {
+          "src": "assets/images/prjct04/4.jpg",
+          "description": "Ex ea commodo consequat for prjct04 img4."
+        },
+        {
+          "src": "assets/images/prjct04/5.jpg",
+          "description": "Ullamco laboris nisi for prjct04 img5."
+        }
+      ]
+    },
+    {
+      "id": "prjct05",
+      "category": "print",
+      "images": [
+        {
+          "src": "assets/images/prjct05/1.jpg",
+          "description": "Duis aute irure dolor for prjct05 img1."
+        },
+        {
+          "src": "assets/images/prjct05/2.jpg",
+          "description": "In voluptate velit esse for prjct05 img2."
+        },
+        {
+          "src": "assets/images/prjct05/3.jpg",
+          "description": "Excepteur sint occaecat for prjct05 img3."
+        }
+      ]
+    },
+    {
+      "id": "prjct06",
+      "category": "3d",
+      "images": [
+        {
+          "src": "assets/images/prjct06/1.jpg",
+          "description": "Lorem ipsum dolor for prjct06 img1."
+        },
+        {
+          "src": "assets/images/prjct06/2.jpg",
+          "description": "Consectetur adipiscing elit for prjct06 img2."
+        },
+        {
+          "src": "assets/images/prjct06/3.jpg",
+          "description": "Sed do eiusmod tempor for prjct06 img3."
+        },
+        {
+          "src": "assets/images/prjct06/4.jpg",
+          "description": "Ex ea commodo consequat for prjct06 img4."
+        },
+        {
+          "src": "assets/images/prjct06/5.jpg",
+          "description": "Ullamco laboris nisi for prjct06 img5."
+        },
+        {
+          "src": "assets/images/prjct06/6.jpg",
+          "description": "Duis aute irure dolor for prjct06 img6."
+        }
+      ]
+    },
+    {
+      "id": "prjct07",
+      "category": "graphic",
+      "images": [
+        {
+          "src": "assets/images/prjct07/1.jpg",
+          "description": "In voluptate velit esse for prjct07 img1."
+        },
+        {
+          "src": "assets/images/prjct07/2.jpg",
+          "description": "Eu fugiat nulla pariatur for prjct07 img2."
+        },
+        {
+          "src": "assets/images/prjct07/3.jpg",
+          "description": "Excepteur sint occaecat for prjct07 img3."
+        },
+        {
+          "src": "assets/images/prjct07/4.jpg",
+          "description": "Cupidatat non proident for prjct07 img4."
+        },
+        {
+          "src": "assets/images/prjct07/5.jpg",
+          "description": "Sunt in culpa qui officia for prjct07 img5."
+        },
+        {
+          "src": "assets/images/prjct07/6.jpg",
+          "description": "Deserunt mollit anim id est laborum for prjct07 img6."
+        },
+        {
+          "src": "assets/images/prjct07/7.jpg",
+          "description": "Lorem ipsum dolor sit amet for prjct07 img7."
+        }
+      ]
+    }
+  ]
+}
