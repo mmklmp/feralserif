@@ -7,41 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const themeToggle = document.getElementById('themeToggle');
 
-  const projects = ['prjct01', 'prjct02', 'prjct03', 'prjct04', 'prjct05', 'prjct06', 'prjct07'];
-  const imagesPerProject = [3, 4, 5, 6, 7];
+  // Load projects from JSON
+  fetch('data/projects.json')
+    .then(res => res.json())
+    .then(data => {
+      data.projects.forEach(project => {
+        project.images.forEach((image, index) => {
+          const imgWrapper = document.createElement('div');
+          imgWrapper.className = 'image-wrapper';
+          imgWrapper.setAttribute('data-category', project.category);
 
-  let loadedImages = [];
+          const img = document.createElement('img');
+          img.className = 'project-image';
+          img.src = image.src;
+          img.alt = `${project.id} image ${index + 1}`;
 
-  // Load images initially
-  function loadImages() {
-    projects.forEach((project) => {
-      const count = imagesPerProject[Math.floor(Math.random() * imagesPerProject.length)];
-      for (let i = 1; i <= count; i++) {
-        const img = document.createElement('img');
-        const imgWrapper = document.createElement('div');
-        const desc = document.createElement('div');
-        imgWrapper.className = 'image-wrapper';
-        img.className = 'project-image';
-        img.src = `assets/images/${project}/${i}.jpg`;
-        img.alt = `${project} image ${i}`;
+          const desc = document.createElement('div');
+          desc.className = 'image-desc';
+          desc.textContent = `${project.id.toUpperCase()} — ${image.description}`;
 
-        desc.className = 'image-desc';
-        desc.textContent = `${project.toUpperCase()} — Image ${i}`;
+          imgWrapper.appendChild(img);
+          imgWrapper.appendChild(desc);
+          gallery.appendChild(imgWrapper);
 
-        imgWrapper.appendChild(img);
-        imgWrapper.appendChild(desc);
-        gallery.appendChild(imgWrapper);
-
-        imgWrapper.addEventListener('click', () => {
-          lightboxImage.src = img.src;
-          lightboxDesc.textContent = desc.textContent;
-          lightbox.style.display = 'flex';
+          imgWrapper.addEventListener('click', () => {
+            lightboxImage.src = img.src;
+            lightboxDesc.textContent = desc.textContent;
+            lightbox.style.display = 'flex';
+          });
         });
-      }
+      });
     });
-  }
-
-  loadImages();
 
   // Lightbox Close
   lightboxClose.addEventListener('click', () => {
