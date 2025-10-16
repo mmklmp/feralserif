@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-title">portfolio</div>
+    <div class="nav-links">
+      <a href="#" id="aboutBtn">about</a>
+      <a href="#" id="contactBtn">contact</a>
+      <div class="toggle-wrapper">
+        <input type="checkbox" id="themeToggle" />
+        <label for="themeToggle" class="toggle-label"></label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Modal -->
+  <div class="modal" id="aboutModal">
+    <div class="modal-content">
+      <span class="close-btn" data-close="#aboutModal">×</span>
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <span class="close-btn" data-close="#contactModal">×</span>
+      <h2>Contact</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">×</span>
+    <img id="lightboxImage" src="" alt="" />
+    <div class="lightbox-desc" id="lightboxDesc"></div>
+  </div>
+
+  <!-- Masonry Gallery -->
+  <main id="gallery" class="masonry-container"></main>
+
+  <!-- Filter Button -->
+  <div class="filter-button" id="filterBtn">filter</div>
+
+  <!-- Filter Modal -->
+  <div class="filter-modal" id="filterModal">
+    <div class="filter-content">
+      <span class="close-btn" data-close="#filterModal">×</span>
+      <h3>Filter Projects</h3>
+      <div class="filters">
+        <button data-filter="*" class="active">All</button>
+        <button data-filter="graphic">Graphic</button>
+        <button data-filter="print">Print</button>
+        <button data-filter="3d">3D</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
