@@ -292,3 +292,7 @@ function updateAllMasonry() {
     updateCardSpan(card);
   });
 }
+
+window.addEventListener('resize', debounce(() => {
+  updateAllMasonry();
+}, 200));
