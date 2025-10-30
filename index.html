@@ -1,71 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>%</title>
+
+  <!-- IBM Plex Mono for title -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-title">portfolio</div>
-    <div class="nav-links">
-      <a href="#" id="aboutBtn">about</a>
-      <a href="#" id="contactBtn">contact</a>
-      <div class="toggle-wrapper">
-        <input type="checkbox" id="themeToggle" />
-        <label for="themeToggle" class="toggle-label"></label>
+  <!-- TOP BAR -->
+  <header class="topbar hairline-b">
+    <a class="brand" href="#" id="brand">
+      <span class="short">f_r_l_s_r_f</span>
+      <span class="long">feral_serif</span>
+    </a>
+
+    <div class="nav-links" style="justify-self:end;">
+      <a href="#" data-panel="about" class="nav-link">About</a>
+      <a href="#" data-panel="contact" class="nav-link">Contact</a>
+    </div>
+
+    <button class="toggle" id="themeToggle" style="justify-self:end;" aria-pressed="false">
+      <span class="sr-only">Toggle color theme</span>
+      <span class="toggle-track" aria-hidden="true">
+        <span class="toggle-thumb"></span>
+      </span>
+    </button>
+  </header>
+
+  <!-- INLINE PANELS -->
+  <div class="panel-wrap">
+    <section id="about" class="panel">
+      <div class="panel-inner">
+        <strong>About.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla,
+        lectus sed ultricies viverra, dui urna dignissim nunc, non porttitor quam lorem a lorem. Replace
+        this placeholder with your actual statement or studio info.
       </div>
-    </div>
-  </nav>
-
-  <!-- About Modal -->
-  <div class="modal" id="aboutModal">
-    <div class="modal-content">
-      <span class="close-btn" data-close="#aboutModal">×</span>
-      <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-    </div>
-  </div>
-
-  <!-- Contact Modal -->
-  <div class="modal" id="contactModal">
-    <div class="modal-content">
-      <span class="close-btn" data-close="#contactModal">×</span>
-      <h2>Contact</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-    </div>
-  </div>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">×</span>
-    <img id="lightboxImage" src="" alt="" />
-    <div class="lightbox-desc" id="lightboxDesc"></div>
-  </div>
-
-  <!-- Masonry Gallery -->
-  <main id="gallery" class="masonry-container"></main>
-
-  <!-- Filter Button -->
-  <div class="filter-button" id="filterBtn">filter</div>
-
-  <!-- Filter Modal -->
-  <div class="filter-modal" id="filterModal">
-    <div class="filter-content">
-      <span class="close-btn" data-close="#filterModal">×</span>
-      <h3>Filter Projects</h3>
-      <div class="filters">
-        <button data-filter="*" class="active">All</button>
-        <button data-filter="graphic">Graphic</button>
-        <button data-filter="print">Print</button>
-        <button data-filter="3d">3D</button>
+    </section>
+    <section id="contact" class="panel">
+      <div class="panel-inner">
+        <strong>Contact.</strong> Email: <a href="mailto:hello@example.com">hello@example.com</a> ·
+        IG: <a href="#">instagram.com/yourhandle</a> · Studio address line.
       </div>
-    </div>
+    </section>
   </div>
+
+  <!-- GRID -->
+  <main class="grid-wrap">
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </main>
+
+  <!-- BOTTOM BAR -->
+  <footer class="bottombar hairline-t">
+    <div class="filter" role="group" aria-label="Filter projects">
+      <span class="filter-label">Projects</span>
+      <div id="filterButtons" class="filter-buttons"></div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
