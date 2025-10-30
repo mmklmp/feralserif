@@ -4,65 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>%</title>
-
-  <!-- IBM Plex Mono for title -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://picsum.photos">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <header id="nav" class="nav hairline-b">
+  <header id="nav" class="nav">
     <div class="nav__inner">
-      <a class="nav__brand" href="#" id="brand">
-        <span class="short">f_r_l_s_r_f</span>
-        <span class="long">feral_serif</span>
-      </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <button type="button" data-panel="about" aria-controls="about" aria-expanded="false" class="nav__link">About</button>
-        <button type="button" data-panel="contact" aria-controls="contact" aria-expanded="false" class="nav__link">Contact</button>
+      <strong>feral_serif</strong>
+      <nav class="nav__links">
+<button class="create">about</button>
+<button class="create">contact</button>
+<button class="create">x|o</button>
       </nav>
-
-      <button class="toggle nav__theme" id="themeToggle" aria-pressed="false">
-        <span class="sr-only">Toggle color theme</span>
-        <span class="toggle-track" aria-hidden="true">
-          <span class="toggle-thumb"></span>
-        </span>
-      </button>
     </div>
   </header>
 
-  <!-- INLINE PANELS -->
-  <div class="panel-wrap">
-    <section id="about" class="panel">
-      <div class="panel-inner">
-        <strong>About.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla,
-        lectus sed ultricies viverra, dui urna dignissim nunc, non porttitor quam lorem a lorem. Replace
-        this placeholder with your actual statement or studio info.
-      </div>
-    </section>
-    <section id="contact" class="panel">
-      <div class="panel-inner">
-        <strong>Contact.</strong> Email: <a href="mailto:hello@example.com">hello@example.com</a> ·
-        IG: <a href="#">instagram.com/yourhandle</a> · Studio address line.
-      </div>
-    </section>
-  </div>
+  <main id="grid" class="grid" aria-live="polite" aria-busy="false"></main>
 
-  <!-- GRID -->
-  <main class="grid-wrap">
-    <div id="grid" class="grid" aria-live="polite"></div>
-  </main>
+  <div id="sentinel" class="sentinel" aria-hidden="true"></div>
 
-  <!-- BOTTOM BAR -->
-  <footer class="bottombar hairline-t">
-    <div class="filter" role="group" aria-label="Filter projects">
-      <span class="filter-label">Projects</span>
-      <div id="filterButtons" class="filter-buttons"></div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
