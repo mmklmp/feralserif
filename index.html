@@ -12,23 +12,25 @@
 <body>
 
   <!-- TOP BAR -->
-  <header class="topbar hairline-b">
-    <a class="brand" href="#" id="brand">
-      <span class="short">f_r_l_s_r_f</span>
-      <span class="long">feral_serif</span>
-    </a>
+  <header id="nav" class="nav hairline-b">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#" id="brand">
+        <span class="short">f_r_l_s_r_f</span>
+        <span class="long">feral_serif</span>
+      </a>
 
-    <div class="nav-links" style="justify-self:end;">
-      <a href="#" data-panel="about" class="nav-link">About</a>
-      <a href="#" data-panel="contact" class="nav-link">Contact</a>
+      <nav class="nav__links" aria-label="Primary">
+        <button type="button" data-panel="about" aria-controls="about" aria-expanded="false" class="nav__link">About</button>
+        <button type="button" data-panel="contact" aria-controls="contact" aria-expanded="false" class="nav__link">Contact</button>
+      </nav>
+
+      <button class="toggle nav__theme" id="themeToggle" aria-pressed="false">
+        <span class="sr-only">Toggle color theme</span>
+        <span class="toggle-track" aria-hidden="true">
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
     </div>
-
-    <button class="toggle" id="themeToggle" style="justify-self:end;" aria-pressed="false">
-      <span class="sr-only">Toggle color theme</span>
-      <span class="toggle-track" aria-hidden="true">
-        <span class="toggle-thumb"></span>
-      </span>
-    </button>
   </header>
 
   <!-- INLINE PANELS -->

@@ -1,4 +1,6 @@
 const grid = document.getElementById('grid');
+const nav = document.getElementById('nav');
+const navLinks = Array.from(document.querySelectorAll('.nav__link'));
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 const filterButtons = document.getElementById('filterButtons');
@@ -117,17 +119,32 @@ themeToggle.addEventListener('click', () => {
 });
 
 /* NAV PANELS */
-document.querySelectorAll('.nav-link').forEach(link => {
+navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     const id = link.dataset.panel;
+    const panel = document.getElementById(id);
+    const willOpen = panel ? !panel.classList.contains('open') : false;
     document.querySelectorAll('.panel').forEach(p => {
-      p.classList.toggle('open', p.id === id && !p.classList.contains('open'));
+      p.classList.toggle('open', p === panel && willOpen);
+    });
+    navLinks.forEach(btn => {
+      const isActive = btn === link && willOpen;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-expanded', String(isActive));
     });
   });
   link.addEventListener('mouseenter', () => link.style.setProperty('--accent', randomAccent()));
   link.addEventListener('mouseleave', () => link.style.removeProperty('--accent'));
 });
+
+const toggleNavShadow = () => {
+  if (!nav) return;
+  nav.classList.toggle('is-stuck', window.scrollY > 4);
+};
+
+toggleNavShadow();
+window.addEventListener('scroll', toggleNavShadow, { passive: true });
 brand.addEventListener('mouseenter', () => brand.style.setProperty('--accent', randomAccent()));
 brand.addEventListener('mouseleave', () => brand.style.removeProperty('--accent'));
 
