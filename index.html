@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive — Portfolio</title>
+    
+    <!-- External Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Xanh+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Internal Assets -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="pt-24">
+
+    <!-- NAVIGATION -->
+    <header id="main-nav" class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="serif text-2xl nav-link px-3 py-1">ARCHIVE.01</a>
+            <div class="relative group">
+                <button id="filter-btn" class="nav-link px-3 py-1 flex items-center">
+                    FILTER <span id="filter-count" class="ml-2 text-[10px] bg-black text-white px-1 hidden">0</span>
+                </button>
+                <div id="filter-dropdown" class="absolute left-0 mt-2 w-48 bg-white border border-black p-4 hidden group-hover:block">
+                    <div id="filter-options" class="flex flex-col space-y-2 text-xs uppercase tracking-widest">
+                        <!-- Options injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="flex space-x-4 uppercase text-[11px] tracking-widest">
+            <button data-modal-trigger="about-modal" class="nav-link px-3 py-1">About</button>
+            <button data-modal-trigger="contact-modal" class="nav-link px-3 py-1">Contact</button>
+        </nav>
+    </header>
+
+    <!-- MASONRY GALLERY -->
+    <main id="gallery" class="grid-container border-t border-black"></main>
+
+    <!-- MODAL SYSTEM -->
+    <div id="about-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center p-6">
+        <div class="max-w-2xl w-full">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="serif text-6xl">About</h2>
+                <button class="modal-close text-3xl">&times;</button>
+            </div>
+            <p class="text-lg leading-relaxed mb-6">A multidisciplinary practice focusing on deconstructed minimalism.</p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal fixed inset-0 z-[70] flex flex-col items-center justify-center p-4">
+        <button class="modal-close absolute top-10 right-10 text-4xl">&times;</button>
+        <img id="lightbox-img" src="" class="max-h-[80vh] object-contain mb-4">
+        <div id="lightbox-caption" class="text-center"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
